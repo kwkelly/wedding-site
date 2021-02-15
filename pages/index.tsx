@@ -52,7 +52,7 @@ const IndexPage = () => (
           The ceremony will be held at <a href="https://fathomgallery.org">Fathom Gallery</a> on October, 16 2021 at 4:00pm. More details to come.
         </p >
       </InfoSection>
-      <InfoSection>
+      <InfoSection id="reccomendations">
         <h2>Recommendations</h2>
         <p>
           We recommend you stay at....
@@ -61,8 +61,8 @@ const IndexPage = () => (
           We recommend you eat at....
         </p >
       </InfoSection>
-      <InfoSection>
-        <h2 id="story">Our Story</h2>
+      <InfoSection id="story">
+        <h2>Our Story</h2>
         <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis rhoncus justo, ut sagittis leo iaculis vitae. Nulla sodales nibh eget sapien tincidunt, eget blandit tortor ullamcorper. Mauris nec neque vitae massa elementum rutrum. Sed iaculis
         tortor lobortis sapien cursus dapibus a quis ipsum. Nam id dui ultrices, porttitor sapien et, dictum nibh. Curabitur sit amet maximus sapien. In id vestibulum lacus. Donec sollicitudin augue purus, porttitor egestas dui tempor at. Praesent
         finibus maximus neque, et euismod tellus ultrices ullamcorper. Maecenas efficitur imperdiet tempus. Suspendisse pretium accumsan neque, nec fringilla nisl viverra non. Praesent id nulla id neque aliquam consequat in volutpat nisl. Sed eget
