@@ -27,7 +27,7 @@ const Layout = ({ children, title }: Props) => (
     </Head>
     <header></header>
     {children}
-    <footer>Made with ❤ in DC️.</footer>
+    <footer>Made with ❤ in DC️. </footer>
   </div>
 );
 

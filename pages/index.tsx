@@ -188,12 +188,12 @@ const IndexPage = () => (
               When making your donation, you can select "Dedicate my donation:
               In honor of" so that we will get notified of the gift you've made.
             </p>
+            <h4>
+              <Link href="https://www.marchofdimes.org/giving/support-general.aspx">
+                <a>Donate Here</a>
+              </Link>
+            </h4>
           </CardBody>
-          <h4>
-            <Link href="https://www.marchofdimes.org/giving/support-general.aspx">
-              <a>Donate Here</a>
-            </Link>
-          </h4>
         </Card>
         <p>If you'd still like to make a monetary gift to us...</p>
       </InfoSection>
