@@ -1,0 +1,4 @@
+# Ignore artifact
+coverage
+out
+.next
