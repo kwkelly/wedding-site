@@ -41,7 +41,7 @@ const Dogs: React.FC<Props> = ({ images }) => {
         updateOnEachImageLoad={false}
       >
         {images.map((image: string) => (
-          <div style={{ width: "400px" }}>
+          <div style={{ width: "400px" }} key={image}>
             <img src={"/dogs/" + image} height="100%" width="100%" />
           </div>
         ))}

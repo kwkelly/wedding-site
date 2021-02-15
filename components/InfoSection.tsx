@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const InfoSection = styled.div`
-    max-width: 768px;
-    margin: auto;
-    padding: 1rem;
+const InfoSection = styled.section`
+  max-width: 768px;
+  margin: auto;
+  padding: 1rem;
 
-    h2 {
-        color: var(--maroon);
-    }
-`
+  h2 {
+    color: var(--maroon);
+  }
+`;
 
-export { InfoSection }
+export { InfoSection };

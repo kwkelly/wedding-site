@@ -5,10 +5,6 @@ import { Header } from "../components/Header";
 import styled from "styled-components";
 import { GlobalStyle } from "../components/GlobalStyles";
 
-// const DonateIcon = styled.img`
-//   width: 100%;
-// `;
-
 const CardThumbnail = styled.img`
   max-width: 75px;
   max-height: 75px;
@@ -16,37 +12,6 @@ const CardThumbnail = styled.img`
   align-self: center;
   margin-right: 1rem;
 `;
-
-// const DonateLink = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   width: 100px;
-//   text-align: center;
-
-//   img {
-//   opacity: 1;
-//   }
-
-//   &:hover {
-//     cursor: pointer;
-//   }
-
-//   &:hover img{
-//     opacity: 0.75;
-//   }​
-
-// `;
-
-// const DonateDescription = styled.div``;
-
-// const DonateArea = styled.div`
-//   display: grid;
-//   grid-template-columns: 125px 1fr;
-//   grid-gap: 0px;
-//   & > * {
-//     border-top: 1px solid var(--lightgreen);
-//   }
-// `;
 
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -71,10 +36,6 @@ const CardHeader = styled.h3`
 const CardBody = styled.div`
   grid-area: body;
 `;
-
-// const LIcon = styled.li<{ bullet: string }>`
-//   list-style-type: "${({ bullet }) => bullet}";
-// `;
 
 const roomBlockLink =
   "https://gc.synxis.com/rez.aspx?Hotel=9028&Chain=1003&arrive=10/15/2021&depart=10/17/2021&adult=1&child=0&group=211015CASS";
@@ -189,9 +150,6 @@ const IndexPage = () => (
           <CardThumbnail src="/images/citydogs.png" />
           <CardHeader>City Dogs Rescue</CardHeader>
           <CardBody>
-            <Link href="https://www.citydogsrescuedc.org/donate.html">
-              <a></a>
-            </Link>
             <p>
               City Dogs Rescue is a DC animal rescue organization that rescues
               adoptable dogs and cats in overcrowded and high-kill shelters,
@@ -208,6 +166,11 @@ const IndexPage = () => (
               honor of a person, event, or pet" so that we will get notified of
               the gift you've made.
             </p>
+            <h4>
+              <Link href="https://www.citydogsrescuedc.org/donate.html">
+                <a>Donate Here</a>
+              </Link>
+            </h4>
           </CardBody>
         </Card>
 
@@ -215,9 +178,6 @@ const IndexPage = () => (
           <CardThumbnail src="/images/marchofdimes.png" />
           <CardHeader>March of Dimes</CardHeader>
           <CardBody>
-            <Link href="https://www.marchofdimes.org/giving/support-general.aspx">
-              <a></a>
-            </Link>
             <p>
               March of Dimes leads the fight for the health of all moms and
               babies. They believe that every baby deserves the best possible
@@ -229,51 +189,12 @@ const IndexPage = () => (
               In honor of" so that we will get notified of the gift you've made.
             </p>
           </CardBody>
+          <h4>
+            <Link href="https://www.marchofdimes.org/giving/support-general.aspx">
+              <a>Donate Here</a>
+            </Link>
+          </h4>
         </Card>
-
-        {/* <DonateArea>
-          <Link href="https://www.citydogsrescuedc.org/donate.html">
-            <a>
-              <DonateLink>
-                <DonateIcon src="/images/citydogs.png" />
-                City Dogs Rescue
-              </DonateLink>
-            </a>
-          </Link>
-          <DonateDescription>
-            <p>
-              City Dogs Rescue is a DC animal rescue organization that rescues
-              adoptable dogs and cats in overcrowded and high-kill shelters,
-              where resources are severely limited.
-            </p>
-            <p>All of our foster dogs have come from City Dogs Rescue.</p>
-            <p>
-              When making your donation, you can select "This is a donation in
-              honor of a person, event, or pet" so that we will get notified of
-              the gift you've made.
-            </p>
-          </DonateDescription>
-          <Link href="https://www.marchofdimes.org/giving/support-general.aspx">
-            <a>
-              <DonateLink>
-                <DonateIcon src="/images/marchofdimes.png" />
-                March of Dimes
-              </DonateLink>
-            </a>
-          </Link>
-          <DonateDescription>
-            <p>
-              March of Dimes leads the fight for the health of all moms and
-              babies. They believe that every baby deserves the best possible
-              start. Unfortunately, not all babies get one. They are changing
-              that.
-            </p>
-            <p>
-              When making your donation, you can select "Dedicate my donation:
-              In honor of" so that we will get notified of the gift you've made.
-            </p>
-          </DonateDescription>
-        </DonateArea> */}
         <p>If you'd still like to make a monetary gift to us...</p>
       </InfoSection>
     </Layout>
