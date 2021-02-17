@@ -16,6 +16,10 @@ const PhotoContainer = styled.div`
   max-width: 1024px;
   margin: auto;
   padding: 1rem;
+
+  & > h1 {
+    color: var(--maroon);
+  }
 `;
 
 type Props = {

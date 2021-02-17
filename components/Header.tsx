@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { BlurredUpImage } from "./BlurredUpImage";
 
 const HeaderArea = styled.div`
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   display: grid;
   @media (min-width: 768px) {
     grid-template-areas:
@@ -67,9 +67,6 @@ const Header = () => (
       </Link>
       <Link href="#recommendations">
         <a>Recommendations</a>
-      </Link>
-      <Link href="#story">
-        <a>Our Story</a>
       </Link>
       <Link href="#registry">
         <a>Registry</a>
