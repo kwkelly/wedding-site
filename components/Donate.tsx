@@ -41,7 +41,10 @@ const CurrencyInput = styled(BaseCurrencyInput)`
   transition: 0.3s;
   border-style: solid;
   height: 48px;
-  margin-right: 1rem;
+
+  @media (min-width: 769px) {
+    margin-right: 1rem;
+  }
 
   &:focus {
     border-color: var(--lightgreen);
@@ -52,7 +55,7 @@ const FormRow = styled.div`
   display: flex;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     flex-direction: row;
     justify-content: flex-end;
   }

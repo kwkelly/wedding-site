@@ -7,7 +7,7 @@ const HeaderArea = styled.header`
   min-height: 100vh;
   min-width: 100vw;
   display: grid;
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     grid-template-areas:
       "header-image  name"
       "header-image  overview";
