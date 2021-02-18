@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { BlurredUpImage } from "./BlurredUpImage";
+import { HeaderImageSet } from "./HeaderImageSet";
 
-const HeaderArea = styled.div`
+const HeaderArea = styled.header`
   min-height: 100vh;
   min-width: 100vw;
   display: grid;
@@ -49,10 +49,7 @@ const Name = styled(HeaderSection)`
 const Header = () => (
   <HeaderArea>
     <HeaderImage>
-      <BlurredUpImage
-        lowQualitySrc="/images/header-compressed.jpg"
-        highQualitySrc="/images/header.jpg"
-      ></BlurredUpImage>
+      <HeaderImageSet />
     </HeaderImage>
     <Name>
       <h1>{"Elizabeth & Keith"}</h1>

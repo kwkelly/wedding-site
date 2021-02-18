@@ -74,7 +74,7 @@ function Donate(props: Props) {
     () => loadStripe(props.STRIPE_PUBLISHABLE_KEY),
     []
   );
-  const [donationAmount, setDonationAmount] = useState(0);
+  const [giftAmount, setGiftAmount] = useState(0);
   const handleClick = async (event: FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
     const stripe = await stripePromise;
@@ -86,7 +86,7 @@ function Donate(props: Props) {
       lineItems: [
         {
           price: props.STRIPE_PRICE_ID,
-          quantity: donationAmount,
+          quantity: giftAmount,
         },
       ],
       mode: "payment",
@@ -100,18 +100,21 @@ function Donate(props: Props) {
   return (
     <form>
       <FormRow>
+        <label htmlFor="amount" style={{ visibility: "hidden" }}>
+          Gift amount
+        </label>
         <CurrencyInput
-          id="donation-amount"
+          id="gift-amount"
           name="amount"
-          placeholder="Enter donation amount"
-          onValueChange={(value) => setDonationAmount(Number(value) ?? 0)}
+          placeholder="Enter gift amount"
+          onValueChange={(value) => setGiftAmount(Number(value) ?? 0)}
           prefix={"$"}
           disableAbbreviations
           step={10}
           allowDecimals={false}
           allowNegativeValue={false}
         />
-        <Button role="link" onClick={handleClick} disabled={!donationAmount}>
+        <Button role="link" onClick={handleClick} disabled={!giftAmount}>
           Checkout
         </Button>
       </FormRow>

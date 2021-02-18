@@ -46,7 +46,12 @@ const Dogs: React.FC<Props> = ({ images }) => {
       >
         {images.map((image: string) => (
           <div style={{ width: "400px" }} key={image}>
-            <img src={"/dogs/" + image} height="100%" width="100%" />
+            <img
+              src={"/dogs/" + image}
+              height="100%"
+              width="100%"
+              alt={image}
+            />
           </div>
         ))}
       </Masonry>

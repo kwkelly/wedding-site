@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 type Props = {
   children?: ReactNode;
@@ -7,7 +8,7 @@ type Props = {
 };
 
 const Layout = ({ children, title }: Props) => (
-  <div>
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -15,6 +16,10 @@ const Layout = ({ children, title }: Props) => (
       <meta
         name="google-site-verification"
         content="sgp30ifTdqrNqKJKuVQgiFBrRZ7XhhrwAJV4kDkaHu8"
+      />
+      <meta
+        name="Description"
+        content="Information about the wedding of Elizabeth Cassidy and Keith Kelly."
       />
       <link
         rel="shortcut icon"
@@ -28,11 +33,36 @@ const Layout = ({ children, title }: Props) => (
         type="image/png"
         href="/favicon-512x512.png"
       />
+      <link
+        rel="preload"
+        href="/fonts/lightheartedly/Lightheartedly.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin="anonymous"
+      ></link>
+      <link
+        rel="preload"
+        href="/fonts/whitney/whitneybook.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin="anonymous"
+      ></link>
+      <link
+        rel="preload"
+        href="/fonts/whitney/whitneylight.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin="anonymous"
+      ></link>
     </Head>
     <header></header>
     {children}
-    <footer>Made with ❤ in DC️. </footer>
-  </div>
+    <footer>
+      <Link href="https://github.com/kwkelly/wedding-site">
+        <a>Made with ❤ in DC</a>
+      </Link>
+    </footer>
+  </>
 );
 
 export default Layout;

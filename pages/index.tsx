@@ -113,7 +113,7 @@ const IndexPage = (props: Props) => {
           If possible, we recommend that you stay near the event venue. Here are
           some options near Fathom Gallery.
           <Card>
-            <CardThumbnail src="/images/viceroy.png" />
+            <CardThumbnail src="/images/viceroy.png" alt="Viceroy logo" />
             <CardHeader>Viceroy Washington DC</CardHeader>
             <CardBody>
               <p>
@@ -166,17 +166,17 @@ const IndexPage = (props: Props) => {
           <p>
             DC has a number of great restaurants in the area that you'll be
             staying. Here are some of our favorites
-            <ul>
-              <li>Churchkey - gastropub with a huge beer selection.</li>
-              <li>
-                Garden District - beer garden with barbecue. What more could you
-                want?
-              </li>
-              <li>Pappe - delicious Indian food.</li>
-              <li>Le Diplomate - famous for their brunch and their burger.</li>
-              <li>Barcelona - tapas and wine bar.</li>
-            </ul>
           </p>
+          <ul>
+            <li>Churchkey - gastropub with a huge beer selection.</li>
+            <li>
+              Garden District - beer garden with barbecue. What more could you
+              want?
+            </li>
+            <li>Pappe - delicious Indian food.</li>
+            <li>Le Diplomate - famous for their brunch and their burger.</li>
+            <li>Barcelona - tapas and wine bar.</li>
+          </ul>
         </InfoSection>
         <InfoSection>
           <h2 id="registry">Registry</h2>
@@ -187,7 +187,10 @@ const IndexPage = (props: Props) => {
           </p>
 
           <Card>
-            <CardThumbnail src="/images/citydogs.png" />
+            <CardThumbnail
+              src="/images/citydogs.png"
+              alt="City Dogs Rescue logo"
+            />
             <CardHeader>City Dogs Rescue</CardHeader>
             <CardBody>
               <p>
@@ -215,7 +218,10 @@ const IndexPage = (props: Props) => {
           </Card>
 
           <Card>
-            <CardThumbnail src="/images/marchofdimes.png" />
+            <CardThumbnail
+              src="/images/marchofdimes.png"
+              alt="March of Dimes logo"
+            />
             <CardHeader>March of Dimes</CardHeader>
             <CardBody>
               <p>
@@ -239,10 +245,13 @@ const IndexPage = (props: Props) => {
 
           <p>
             If you'd still like to make a monetary gift to us feel free to make
-            a donation via stripe below.
+            a contribution below.
           </p>
           <Card>
-            <CardThumbnail src="/favicon-512x512.png" />
+            <CardThumbnail
+              src="/favicon-512x512.png"
+              alt="E and K wedding logo"
+            />
             <CardHeader>A gift for us!</CardHeader>
             <CardBody>
               Enter a gift amount and click Checkout. You'll be redirected to{" "}
