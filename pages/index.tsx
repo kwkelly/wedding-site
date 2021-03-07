@@ -95,9 +95,9 @@ const IndexPage = (props: Props) => {
         <InfoSection id="details">
           <h2>Event Details</h2>
           <p>
-            The ceremony will be held at{" "}
+            The ceremony and reception will be held at{" "}
             <a href="https://fathomgallery.org">Fathom Gallery</a> on October,
-            16 2021 at 4:00pm.
+            16 2021 at 4:30pm.
           </p>
           <p>
             Following the ceremony will be a reception catered by{" "}
@@ -106,12 +106,34 @@ const IndexPage = (props: Props) => {
             </Link>
             .
           </p>
+
+          <Card>
+            <CardThumbnail src="/images/fathom.png" alt="Fathom logo" />
+            <CardHeader>Fathom Gallery</CardHeader>
+            <CardBody>
+              <ul>
+                <li>1333 14th St NW, Washington DC, 20005</li>
+                <li>1-202-588-8111</li>
+                <li>
+                  <Link href="mailto:info@fathomgallery.org">
+                    info@fathomgallery.org
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.fathomgallery.org">
+                    <a>www.fathomgallery.org</a>
+                  </Link>
+                </li>
+              </ul>
+            </CardBody>
+          </Card>
         </InfoSection>
         <InfoSection id="recommendations">
           <h2>Recommendations</h2>
           <h3>Stay</h3>
-          If possible, we recommend that you stay near the event venue. Here are
-          some options near Fathom Gallery.
+          Here are some options near Fathom Gallery, but please feel free to ask
+          us for other recommendations as there are many other lodging options
+          in the area.
           <Card>
             <CardThumbnail src="/images/viceroy.png" alt="Viceroy logo" />
             <CardHeader>Viceroy Washington DC</CardHeader>
@@ -145,6 +167,7 @@ const IndexPage = (props: Props) => {
             </CardBody>
           </Card>
           <Card>
+            <CardThumbnail src="/images/darcy.png" alt="Darcy logo" />
             <CardHeader>The Darcy</CardHeader>
             <CardBody>
               <p>
@@ -164,8 +187,8 @@ const IndexPage = (props: Props) => {
           </Card>
           <h3>Dine</h3>
           <p>
-            DC has a number of great restaurants in the area that you'll be
-            staying. Here are some of our favorites
+            DC has a number of great restaurants in the area of the venue. Here
+            are some of our favorites:
           </p>
           <ul>
             <li>Churchkey - gastropub with a huge beer selection.</li>
@@ -181,9 +204,12 @@ const IndexPage = (props: Props) => {
         <InfoSection>
           <h2 id="registry">Registry</h2>
           <p>
-            We don't really need anything and don't have space for any more
-            stuff, so instead of a traditional registry, we're encouraging our
-            guests to donate to causes that we feel strongly about.
+            We so appreciate our friends and families traveling to celebrate
+            with us on this joyous occasion. Your presence is the best gift we
+            could hope to receive. Instead, we’d like to encourage you to donate
+            to these causes that are very special to us and the local community.
+            Further, we hope you can understand that we have everything we need
+            and are limited by a small living space.
           </p>
 
           <Card>
