@@ -214,6 +214,32 @@ const IndexPage = (props: Props) => {
 
           <Card>
             <CardThumbnail
+              src="/images/maryscenter.png"
+              alt="Mary's Center logo"
+            />
+            <CardHeader>Mary's Center</CardHeader>
+            <CardBody>
+              <p>
+                Every day, hundreds of families in the Washington, DC region
+                struggle to make ends meet. When illness hits, many of them will
+                forgo a doctor’s visit because the cost of care might mean not
+                being able to put food on the table or keep a roof over their
+                heads. At Mary’s Center, we believe quality healthcare is not
+                just a service. It’s a human right. That’s why we work hard to
+                help move families out of poverty and ensure everyone has access
+                to the best possible healthcare, education, and social
+                services—regardless of their ability to pay.
+              </p>
+              <h4>
+                <Link href="https://www.justgiving.com/fundraising/elizabethandkeith">
+                  <a>Donate Here</a>
+                </Link>
+              </h4>
+            </CardBody>
+          </Card>
+
+          <Card>
+            <CardThumbnail
               src="/images/citydogs.png"
               alt="City Dogs Rescue logo"
             />
@@ -237,32 +263,6 @@ const IndexPage = (props: Props) => {
               </p>
               <h4>
                 <Link href="https://www.citydogsrescuedc.org/donate.html">
-                  <a>Donate Here</a>
-                </Link>
-              </h4>
-            </CardBody>
-          </Card>
-
-          <Card>
-            <CardThumbnail
-              src="/images/marchofdimes.png"
-              alt="March of Dimes logo"
-            />
-            <CardHeader>March of Dimes</CardHeader>
-            <CardBody>
-              <p>
-                March of Dimes leads the fight for the health of all moms and
-                babies. They believe that every baby deserves the best possible
-                start. Unfortunately, not all babies get one. They are changing
-                that.
-              </p>
-              <p>
-                When making your donation, you can select "Dedicate my donation:
-                In honor of" so that we will get notified of the gift you've
-                made.
-              </p>
-              <h4>
-                <Link href="https://www.marchofdimes.org/giving/support-general.aspx">
                   <a>Donate Here</a>
                 </Link>
               </h4>
