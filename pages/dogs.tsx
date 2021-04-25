@@ -2,60 +2,65 @@ import React from "react";
 import { GlobalStyle } from "../components/GlobalStyles";
 import { readdirSync } from "fs";
 import { join } from "path";
-import Masonry from "react-masonry-component";
 import styled from "styled-components";
 
 export async function getStaticProps(_context: any) {
-  const images = readdirSync(join(process.cwd(), "public", "dogs"));
+  const images = readdirSync(join(process.cwd(), "public", "dogs"))
+    .filter((image) => image.endsWith("jpg"))
+    .map((image) => image.replace(/\.[^/.]+$/, ""));
   return {
     props: { images },
   };
 }
 
 const PhotoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > * + * {
+    margin-top: 1rem;
+  }
+`;
+
+const PageContainer = styled.div`
   max-width: 1024px;
   margin: auto;
   padding: 1rem;
+`;
 
-  & > h1 {
-    color: var(--maroon);
-  }
+const H1 = styled.h1`
+  color: var(--maroon);
 `;
 
 type Props = {
   images: string[];
 };
 
-const Dogs: React.FC<Props> = ({ images }) => {
-  const masonryOptions = {
-    fitWidth: true,
-    columnWidth: 400,
-    gutter: 5,
-  };
+const Img = styled.img`
+  max-height: calc(100vh - 4rem);
+  max-width: calc(min(100vw - 4rem, 1024px));
+`;
 
+const Dogs: React.FC<Props> = ({ images }) => {
   return (
-    <PhotoContainer>
+    <PageContainer>
       <GlobalStyle />
-      <h1>Dogs</h1>
-      <Masonry
-        className={"grid"}
-        elementType={"div"}
-        options={masonryOptions}
-        disableImagesLoaded={false}
-        updateOnEachImageLoad={false}
-      >
+      <H1>Dogs</H1>
+      <PhotoContainer>
         {images.map((image: string) => (
-          <div style={{ width: "400px" }} key={image}>
-            <img
-              src={"/dogs/" + image}
-              height="100%"
-              width="100%"
+          // <Img src={"/dogs/" + image} alt={image}  />
+          <picture key={image}>
+            <source srcSet={`/dogs/${image}.webp 1024w`} type="image/webp" />
+            <source srcSet={`/dogs/${image}.jpg 1024w`} type="image/jpeg" />
+            <Img
+              src={`/dogs/${image}.jpg`}
               alt={image}
+              srcSet={`/dogs/${image}.jpg 1024w`}
             />
-          </div>
+          </picture>
         ))}
-      </Masonry>
-    </PhotoContainer>
+      </PhotoContainer>
+    </PageContainer>
   );
 };
 

@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { InfoSection } from "../components/InfoSection";
 import { Header } from "../components/Header";
-import styled from "styled-components";
 import { GlobalStyle } from "../components/GlobalStyles";
 import { Donate } from "../components/Donate";
 import { ToastContainer, toast } from "react-toastify";
+import * as Card from "../components/Card";
 import "react-toastify/dist/ReactToastify.css";
 
 export async function getStaticProps() {
@@ -19,38 +19,6 @@ export async function getStaticProps() {
     },
   };
 }
-
-const CardThumbnail = styled.img`
-  max-width: 75px;
-  max-height: 75px;
-  grid-area: thumbnail;
-  align-self: center;
-  margin-right: 1rem;
-`;
-
-const Card = styled.div`
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-  padding: 1rem;
-  margin: 1rem;
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "thumbnail  header"
-    "body       body";
-`;
-
-const CardHeader = styled.h3`
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-`;
-
-const CardBody = styled.div`
-  grid-area: body;
-`;
 
 const roomBlockLink =
   "https://gc.synxis.com/rez.aspx?Hotel=9028&Chain=1003&arrive=10/15/2021&depart=10/17/2021&adult=1&child=0&group=211015CASS";
@@ -107,10 +75,10 @@ const IndexPage = (props: Props) => {
             .
           </p>
 
-          <Card>
-            <CardThumbnail src="/images/fathom.png" alt="Fathom logo" />
-            <CardHeader>Fathom Gallery</CardHeader>
-            <CardBody>
+          <Card.Container>
+            <Card.Thumbnail src="/images/fathom.png" alt="Fathom logo" />
+            <Card.Header>Fathom Gallery</Card.Header>
+            <Card.Body>
               <ul>
                 <li>1333 14th St NW, Washington DC, 20005</li>
                 <li>1-202-588-8111</li>
@@ -125,8 +93,8 @@ const IndexPage = (props: Props) => {
                   </Link>
                 </li>
               </ul>
-            </CardBody>
-          </Card>
+            </Card.Body>
+          </Card.Container>
         </InfoSection>
         <InfoSection id="recommendations">
           <h2>Recommendations</h2>
@@ -134,10 +102,10 @@ const IndexPage = (props: Props) => {
           Here are some options near Fathom Gallery, but please feel free to ask
           us for other recommendations as there are many other lodging options
           in the area.
-          <Card>
-            <CardThumbnail src="/images/viceroy.png" alt="Viceroy logo" />
-            <CardHeader>Viceroy Washington DC</CardHeader>
-            <CardBody>
+          <Card.Container>
+            <Card.Thumbnail src="/images/viceroy.png" alt="Viceroy logo" />
+            <Card.Header>Viceroy Washington DC</Card.Header>
+            <Card.Body>
               <p>
                 We have a{" "}
                 <Link href={roomBlockLink}>
@@ -164,12 +132,12 @@ const IndexPage = (props: Props) => {
                   </Link>
                 </li>
               </ul>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardThumbnail src="/images/darcy.png" alt="Darcy logo" />
-            <CardHeader>The Darcy</CardHeader>
-            <CardBody>
+            </Card.Body>
+          </Card.Container>
+          <Card.Container>
+            <Card.Thumbnail src="/images/darcy.png" alt="Darcy logo" />
+            <Card.Header>The Darcy</Card.Header>
+            <Card.Body>
               <p>
                 Also very close to the event location is The Darcy, another
                 boutique hotel.
@@ -183,8 +151,8 @@ const IndexPage = (props: Props) => {
                   </Link>
                 </li>
               </ul>
-            </CardBody>
-          </Card>
+            </Card.Body>
+          </Card.Container>
           <h3>Dine</h3>
           <p>
             DC has a number of great restaurants in the area of the venue. Here
@@ -212,13 +180,13 @@ const IndexPage = (props: Props) => {
             and are limited by a small living space.
           </p>
 
-          <Card>
-            <CardThumbnail
+          <Card.Container>
+            <Card.Thumbnail
               src="/images/maryscenter.png"
               alt="Mary's Center logo"
             />
-            <CardHeader>Mary's Center</CardHeader>
-            <CardBody>
+            <Card.Header>Mary's Center</Card.Header>
+            <Card.Body>
               <p>
                 Every day, hundreds of families in the Washington, DC region
                 struggle to make ends meet. When illness hits, many of them will
@@ -235,16 +203,16 @@ const IndexPage = (props: Props) => {
                   <a>Donate Here</a>
                 </Link>
               </h4>
-            </CardBody>
-          </Card>
+            </Card.Body>
+          </Card.Container>
 
-          <Card>
-            <CardThumbnail
+          <Card.Container>
+            <Card.Thumbnail
               src="/images/citydogs.png"
               alt="City Dogs Rescue logo"
             />
-            <CardHeader>City Dogs Rescue</CardHeader>
-            <CardBody>
+            <Card.Header>City Dogs Rescue</Card.Header>
+            <Card.Body>
               <p>
                 City Dogs Rescue is a DC animal rescue organization that rescues
                 adoptable dogs and cats in overcrowded and high-kill shelters,
@@ -266,28 +234,28 @@ const IndexPage = (props: Props) => {
                   <a>Donate Here</a>
                 </Link>
               </h4>
-            </CardBody>
-          </Card>
+            </Card.Body>
+          </Card.Container>
 
           <p>
             If you'd still like to make a monetary gift to us feel free to make
             a contribution below.
           </p>
-          <Card>
-            <CardThumbnail
+          <Card.Container>
+            <Card.Thumbnail
               src="/favicon-512x512.png"
               alt="E and K wedding logo"
             />
-            <CardHeader>A gift for us!</CardHeader>
-            <CardBody>
+            <Card.Header>A gift for us!</Card.Header>
+            <Card.Body>
               Enter a gift amount and click Checkout. You'll be redirected to{" "}
               <Link href="https://stripe.com/">
                 <a>Stripe</a>
               </Link>{" "}
               for payment processing.
               <Donate {...props} />
-            </CardBody>
-          </Card>
+            </Card.Body>
+          </Card.Container>
         </InfoSection>
       </Layout>
     </>
